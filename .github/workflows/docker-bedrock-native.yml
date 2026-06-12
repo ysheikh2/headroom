@@ -3,7 +3,7 @@ name: Docker Bedrock Native
 on:
   workflow_dispatch:
   push:
-    branches: [feat/bedrock-converse-stream-route]
+    branches: [main]
     paths:
       - "crates/**"
       - "Cargo.toml"
