@@ -1,0 +1,20 @@
+FROM rust:1.95-bookworm AS builder
+
+WORKDIR /src
+
+COPY Cargo.toml Cargo.lock rust-toolchain.toml ./
+COPY crates/ crates/
+
+RUN cargo build --release -p headroom-proxy
+
+FROM debian:bookworm-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates curl \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /src/target/release/headroom-proxy /usr/local/bin/headroom-proxy
+
+EXPOSE 8787
+
+ENTRYPOINT ["headroom-proxy"]
