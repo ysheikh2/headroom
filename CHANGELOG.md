@@ -22,6 +22,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * **proxy:** add native Bedrock `/model/{id}/converse-stream` route and forward it through the existing streaming EventStream/SSE pipeline.
 
 
+## [0.25.1](https://github.com/ysheikh2/headroom/compare/v0.25.0...v0.25.1) (2026-06-12)
+
+
+### Bug Fixes
+
+* **bedrock:** restore full native converse-stream + SSE lane ([89c7bc0](https://github.com/ysheikh2/headroom/commit/89c7bc0d0f703de6c9476ba3557288954c936f97))
+* **bedrock:** translate Converse stream events in SSE mode ([6735830](https://github.com/ysheikh2/headroom/commit/6735830f1a0cc187e0392e473bbec0cfedbf8cd3))
+* **codex:** write canonical hooks feature flag and migrate deprecated codex_hooks ([#743](https://github.com/ysheikh2/headroom/issues/743)) ([dff6a19](https://github.com/ysheikh2/headroom/commit/dff6a19946b8f96bb8b16fa945b69a1ed09709af))
+* **proxy:** add native bedrock converse-stream route ([604d080](https://github.com/ysheikh2/headroom/commit/604d080196624e062415cb528930a6e1edb12f51))
+
 ## [0.25.0](https://github.com/chopratejas/headroom/compare/v0.24.0...v0.25.0) (2026-06-12)
 
 
